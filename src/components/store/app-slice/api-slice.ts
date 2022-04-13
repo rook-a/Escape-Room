@@ -1,13 +1,13 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { State } from '../../types/state';
-import { NameSpace, Genre } from '../../utils/const';
+import { NameSpace, GenreType } from '../../utils/const';
 
 interface InitialState {
   filterType: string;
 }
 
 const initialState: InitialState = {
-  filterType: Genre.All,
+  filterType: GenreType.All,
 };
 
 export const appSlice = createSlice({

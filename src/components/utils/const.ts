@@ -5,6 +5,15 @@ import { ReactComponent as IconMystic } from '../../assets/img/icon-mystic.svg';
 import { ReactComponent as IconDetective } from '../../assets/img/icon-detective.svg';
 import { ReactComponent as IconScifi } from '../../assets/img/icon-scifi.svg';
 
+export const enum GenreType {
+  All = 'all',
+  Adventures = 'adventures',
+  Horror = 'horror',
+  Mystic = 'mystic',
+  Detective = 'detective',
+  SciFi = 'sci-fi',
+}
+
 export const enum Genre {
   All = 'Все квесты',
   Adventures = 'Приключения',
@@ -28,31 +37,37 @@ export const genres = [
     id: 1,
     title: Genre.All,
     icon: Icon.All,
+    type: GenreType.All,
   },
   {
     id: 2,
     title: Genre.Adventures,
     icon: Icon.Adventures,
+    type: GenreType.Adventures,
   },
   {
     id: 3,
     title: Genre.Horror,
     icon: Icon.Horror,
+    type: GenreType.Horror,
   },
   {
     id: 4,
     title: Genre.Mystic,
     icon: Icon.Mystic,
+    type: GenreType.Mystic,
   },
   {
     id: 5,
     title: Genre.Detective,
     icon: Icon.Detective,
+    type: GenreType.Detective,
   },
   {
     id: 6,
     title: Genre.SciFi,
     icon: Icon.SciFi,
+    type: GenreType.SciFi,
   },
 ];
 
@@ -101,5 +116,5 @@ export enum FetchStatus {
 
 export enum NameSpace {
   App = 'App',
-  Quests = '/quests',
+  Quests = 'Quests',
 }
