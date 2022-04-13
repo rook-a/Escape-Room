@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { genres } from 'src/components/utils/conts';
+import { genres } from 'src/components/utils/const';
 
 import * as S from './tabs.styled';
 

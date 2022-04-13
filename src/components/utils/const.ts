@@ -5,36 +5,54 @@ import { ReactComponent as IconMystic } from '../../assets/img/icon-mystic.svg';
 import { ReactComponent as IconDetective } from '../../assets/img/icon-detective.svg';
 import { ReactComponent as IconScifi } from '../../assets/img/icon-scifi.svg';
 
+export const enum Genre {
+  All = 'Все квесты',
+  Adventures = 'Приключения',
+  Horror = 'Ужасы',
+  Mystic = 'Мистика',
+  Detective = 'Детектив',
+  SciFi = 'Sci-fi',
+}
+
+const Icon = {
+  All: IconAllQuests,
+  Adventures: IconAdventures,
+  Horror: IconHorrors,
+  Mystic: IconMystic,
+  Detective: IconDetective,
+  SciFi: IconScifi,
+} as const;
+
 export const genres = [
   {
     id: 1,
-    title: 'Все квесты',
-    icon: IconAllQuests,
+    title: Genre.All,
+    icon: Icon.All,
   },
   {
     id: 2,
-    title: 'Приключения',
-    icon: IconAdventures,
+    title: Genre.Adventures,
+    icon: Icon.Adventures,
   },
   {
     id: 3,
-    title: 'Ужасы',
-    icon: IconHorrors,
+    title: Genre.Horror,
+    icon: Icon.Horror,
   },
   {
     id: 4,
-    title: 'Мистика',
-    icon: IconMystic,
+    title: Genre.Mystic,
+    icon: Icon.Mystic,
   },
   {
     id: 5,
-    title: 'Детектив',
-    icon: IconDetective,
+    title: Genre.Detective,
+    icon: Icon.Detective,
   },
   {
     id: 6,
-    title: 'Sci-fi',
-    icon: IconScifi,
+    title: Genre.SciFi,
+    icon: Icon.SciFi,
   },
 ];
 
@@ -66,12 +84,12 @@ export enum AppRoute {
 
 export enum HttpCode {
   BadRequest = 400,
-  Unauthorized = 401,
   NotFound = 404,
 }
 
 export enum APIRoute {
   Quests = '/quests',
+  Orders = '/orders',
 }
 
 export enum FetchStatus {

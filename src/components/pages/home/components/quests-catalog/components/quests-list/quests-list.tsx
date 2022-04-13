@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { quesrs } from 'src/components/utils/mock';
-import { levels } from 'src/components/utils/conts';
+import { levels } from 'src/components/utils/const';
 
 import { ReactComponent as IconPerson } from '../../../../../../../assets/img/icon-person.svg';
 import { ReactComponent as IconPuzzle } from '../../../../../../../assets/img/icon-puzzle.svg';
