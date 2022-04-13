@@ -71,28 +71,15 @@ export const genres = [
   },
 ];
 
-const enum LevelName {
+export const enum LevelName {
   Easy = 'easy',
   Medium = 'medium',
   Hard = 'hard',
 }
 
-export const levels = (level: string) => {
-  switch (level) {
-    case LevelName.Easy:
-      return 'Лёгкий';
-    case LevelName.Medium:
-      return 'Средний';
-    case LevelName.Hard:
-      return 'Сложный';
-    default:
-      return 'Неизвестная сложность';
-  }
-};
-
 export enum AppRoute {
   Main = '/',
-  Quest = '/quest',
+  Quest = '/detailed-quest',
   Contacts = '/contacts',
   NotFound = '*',
 }
