@@ -4,7 +4,7 @@ import {
   PageTitle,
   PageHeading,
   PageSubtext,
-} from '../common/common';
+} from '../../common/common';
 import React from 'react';
 import { QuestsCatalog } from './components/components';
 

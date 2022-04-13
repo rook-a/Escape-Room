@@ -1,9 +1,9 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import { Routes, Route, BrowserRouter } from '../common/common';
-import DetailedQuest from '../detailed-quest/detailed-quest';
-import Contacts from '../contacts/contacts';
-import Home from '../home/home';
+import DetailedQuest from '../pages/detailed-quest/detailed-quest';
+import Contacts from '../pages/contacts/contacts';
+import Home from '../pages/home/home';
 import { appTheme } from './common';
 import * as S from './app.styled';
 
