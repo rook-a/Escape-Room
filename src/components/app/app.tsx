@@ -4,6 +4,7 @@ import { Routes, Route, BrowserRouter } from '../common/common';
 import DetailedQuest from '../pages/detailed-quest/detailed-quest';
 import Contacts from '../pages/contacts/contacts';
 import Home from '../pages/home/home';
+import NotFound from '../pages/not-found/not-found';
 import { appTheme } from './common';
 import * as S from './app.styled';
 
@@ -15,7 +16,7 @@ const App = () => (
         <Route path="/" element={<Home />} />
         <Route path="/quest" element={<DetailedQuest />} />
         <Route path="/contacts" element={<Contacts />} />
-        <Route path="*" element={<h1> not found </h1>} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   </ThemeProvider>

@@ -6,11 +6,11 @@ import * as S from './tabs.styled';
 
 const Tabs = () => (
   <S.Tabs>
-    {genres.map(({ title, icon }) => {
+    {genres.map(({ id, title, icon }) => {
       const Icon = icon;
 
       return (
-        <S.TabItem>
+        <S.TabItem key={id}>
           <S.TabBtn isActive>
             <Icon />
             <S.TabTitle>{title}</S.TabTitle>
