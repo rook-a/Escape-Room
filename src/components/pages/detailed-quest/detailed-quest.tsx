@@ -29,7 +29,7 @@ const DetailedQuest = () => {
   }, [dispatch, selectedQuestId]);
 
   const handleClick = () => {
-    setIsBookingModalOpened(true);
+    setIsBookingModalOpened(!isBookingModalOpened);
   };
 
   if (!quest) {
@@ -78,7 +78,9 @@ const DetailedQuest = () => {
           </S.PageDescription>
         </S.PageContentWrapper>
 
-        {isBookingModalOpened && <BookingModal />}
+        {isBookingModalOpened && (
+          <BookingModal onBookingModalClick={handleClick} />
+        )}
       </S.Main>
     </MainLayout>
   );

@@ -21,6 +21,8 @@ interface InitialState {
   quest: Quest | null;
   questStatus: FetchStatus;
   questError: boolean;
+
+  sendOrderStatus: FetchStatus;
 }
 
 const initialState: InitialState = {
@@ -31,6 +33,8 @@ const initialState: InitialState = {
   quest: null,
   questStatus: FetchStatus.Idle,
   questError: false,
+
+  sendOrderStatus: FetchStatus.Idle,
 };
 
 export const fetchQuestsAction = createAsyncThunk<
@@ -101,7 +105,11 @@ export const sendOrder = createAsyncThunk<
 export const questsSlice = createSlice({
   name: NameSpace.Quests,
   initialState,
-  reducers: {},
+  reducers: {
+    changeOrderStatus: (state, action) => {
+      state.sendOrderStatus = action.payload;
+    },
+  },
   extraReducers: (buider) => {
     buider
       .addCase(fetchQuestsAction.pending, (state) => {
@@ -125,14 +133,27 @@ export const questsSlice = createSlice({
       .addCase(fetchQuestAction.rejected, (state) => {
         state.questStatus = FetchStatus.Failed;
         state.questError = true;
+      })
+      .addCase(sendOrder.pending, (state) => {
+        state.sendOrderStatus = FetchStatus.Pending;
+      })
+      .addCase(sendOrder.fulfilled, (state) => {
+        state.sendOrderStatus = FetchStatus.Success;
+      })
+      .addCase(sendOrder.rejected, (state) => {
+        state.sendOrderStatus = FetchStatus.Failed;
       });
   },
 });
+
+export const { changeOrderStatus } = questsSlice.actions;
 
 const selectQuestsState = (state: State) => state[NameSpace.Quests];
 
 export const selectQuests = (state: State) => selectQuestsState(state).quests;
 export const selectQuest = (state: State) => selectQuestsState(state).quest;
+export const selectSendOrderStatus = (state: State) =>
+  selectQuestsState(state).sendOrderStatus;
 
 export const selectCurrentQuests = createSelector(
   selectQuests,

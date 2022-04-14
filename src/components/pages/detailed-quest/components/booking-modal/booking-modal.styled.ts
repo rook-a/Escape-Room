@@ -2,6 +2,10 @@ import styled from 'styled-components';
 import { Button } from '../../../../common/common';
 import IconTick from '../../../../../assets/img/icon-tick.svg';
 
+interface IInputError {
+  error: boolean;
+}
+
 const BlockLayer = styled.div`
   z-index: 10;
   position: fixed;
@@ -73,7 +77,7 @@ const BookingForm = styled.form`
   flex-direction: column;
 `;
 
-const BookingField = styled.p`
+const BookingField = styled.p<IInputError>`
   display: flex;
   flex-direction: column;
 
@@ -82,7 +86,7 @@ const BookingField = styled.p`
   padding-right: 16px;
 
   &:not(:last-of-type) {
-    margin-bottom: 30px;
+    margin-bottom: ${(prop) => (prop.error ? '10px' : '30px')};
   }
 `;
 
@@ -91,7 +95,7 @@ const BookingLabel = styled.label`
   color: ${({ theme }) => theme.color.whisper2};
 `;
 
-const BookingInput = styled.input`
+const BookingInput = styled.input<IInputError>`
   padding-top: 17px;
   padding-right: 24px;
   padding-bottom: 18px;
@@ -101,7 +105,10 @@ const BookingInput = styled.input`
 
   color: ${({ theme }) => theme.color.white};
   background-color: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.4);
+  border: ${(prop) =>
+    prop.error
+      ? '1px solid rgba(255, 0, 0, 0.4)'
+      : '1px solid rgba(255, 255, 255, 0.4)'};
   border-radius: 3px;
 
   &::placeholder {
@@ -109,10 +116,20 @@ const BookingInput = styled.input`
     opacity: 0.64;
   }
 
+  &:focus {
+    outline: ${(prop) => prop.error && '1px solid rgba(255, 0, 0, 0.4)'};
+  }
+
   &:focus,
   &:hover {
     opacity: 0.8;
   }
+`;
+
+const BookingInputError = styled.span`
+  font-family: inherit;
+  font-size: 14px;
+  color: ${({ theme }) => theme.color.error};
 `;
 
 const BookingSubmit = styled(Button)`
@@ -220,6 +237,7 @@ export {
   BookingField,
   BookingLabel,
   BookingInput,
+  BookingInputError,
   BookingSubmit,
   BookingCheckboxWrapper,
   BookingCheckboxLabel,

@@ -16,15 +16,15 @@ export const levels = (level: string) => {
 export const genreType = (type: string) => {
   switch (type) {
     case GenreType.Adventures:
-      return 'Приключения';
+      return 'приключения';
     case GenreType.Horror:
-      return 'Ужасы';
+      return 'ужасы';
     case GenreType.Mystic:
-      return 'Мистика';
+      return 'мистика';
     case GenreType.Detective:
-      return 'Детектив';
+      return 'детектив';
     case GenreType.SciFi:
-      return 'Sci-fi';
+      return 'sci-fi';
     default:
       return 'Жанр неизвестен';
   }
