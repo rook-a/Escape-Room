@@ -4,7 +4,7 @@ import * as S from './button.styled';
 interface IButton {
   type?: 'button' | 'submit' | 'reset' | undefined;
   disabled?: boolean;
-  children: string;
+  children: string | React.ReactNode;
   onClick?: () => void;
 }
 
