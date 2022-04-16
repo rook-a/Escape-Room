@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { State } from '../../types/state';
-import { NameSpace, GenreType, MenuLinkName } from '../../utils/const';
+import { NameSpace, GenreFromTheServer, MenuLinkName } from '../../utils/const';
 
 interface InitialState {
   activePage: string;
@@ -10,7 +10,7 @@ interface InitialState {
 
 const initialState: InitialState = {
   activePage: MenuLinkName.Quests,
-  filterType: GenreType.All,
+  filterType: GenreFromTheServer.All,
   questPopupOpen: false,
 };
 

@@ -36,7 +36,7 @@ export const menuLinks = [
   },
 ];
 
-export const enum GenreType {
+export const enum GenreFromTheServer {
   All = 'all',
   Adventures = 'adventures',
   Horror = 'horror',
@@ -45,7 +45,7 @@ export const enum GenreType {
   SciFi = 'sci-fi',
 }
 
-export const enum Genre {
+export const enum GenreForClient {
   All = 'Все квесты',
   Adventures = 'Приключения',
   Horror = 'Ужасы',
@@ -66,39 +66,39 @@ const Icon = {
 export const genres = [
   {
     id: 1,
-    title: Genre.All,
+    title: GenreForClient.All,
     icon: Icon.All,
-    type: GenreType.All,
+    type: GenreFromTheServer.All,
   },
   {
     id: 2,
-    title: Genre.Adventures,
+    title: GenreForClient.Adventures,
     icon: Icon.Adventures,
-    type: GenreType.Adventures,
+    type: GenreFromTheServer.Adventures,
   },
   {
     id: 3,
-    title: Genre.Horror,
+    title: GenreForClient.Horror,
     icon: Icon.Horror,
-    type: GenreType.Horror,
+    type: GenreFromTheServer.Horror,
   },
   {
     id: 4,
-    title: Genre.Mystic,
+    title: GenreForClient.Mystic,
     icon: Icon.Mystic,
-    type: GenreType.Mystic,
+    type: GenreFromTheServer.Mystic,
   },
   {
     id: 5,
-    title: Genre.Detective,
+    title: GenreForClient.Detective,
     icon: Icon.Detective,
-    type: GenreType.Detective,
+    type: GenreFromTheServer.Detective,
   },
   {
     id: 6,
-    title: Genre.SciFi,
+    title: GenreForClient.SciFi,
     icon: Icon.SciFi,
-    type: GenreType.SciFi,
+    type: GenreFromTheServer.SciFi,
   },
 ];
 
@@ -137,5 +137,7 @@ export const enum NameSpace {
   Quests = 'Quests',
 }
 
-export const LAT = 59.96832;
-export const LNG = 30.31647;
+export const enum Location {
+  Lat = 59.96832,
+  Lng = 30.31647,
+}

@@ -1,4 +1,4 @@
-import { GenreType, LevelName } from './const';
+import { GenreFromTheServer, LevelName } from './const';
 
 export const levels = (level: string) => {
   switch (level) {
@@ -15,15 +15,15 @@ export const levels = (level: string) => {
 
 export const genreType = (type: string) => {
   switch (type) {
-    case GenreType.Adventures:
+    case GenreFromTheServer.Adventures:
       return 'приключения';
-    case GenreType.Horror:
+    case GenreFromTheServer.Horror:
       return 'ужасы';
-    case GenreType.Mystic:
+    case GenreFromTheServer.Mystic:
       return 'мистика';
-    case GenreType.Detective:
+    case GenreFromTheServer.Detective:
       return 'детектив';
-    case GenreType.SciFi:
+    case GenreFromTheServer.SciFi:
       return 'sci-fi';
     default:
       return 'Жанр неизвестен';

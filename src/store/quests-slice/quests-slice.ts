@@ -11,7 +11,12 @@ import { handleError } from 'src/services/handle-error';
 import { Quest } from 'src/types/quest';
 import { Order } from 'src/types/order';
 import { State, AppDispatch } from '../../types/state';
-import { NameSpace, FetchStatus, APIRoute, GenreType } from '../../utils/const';
+import {
+  NameSpace,
+  FetchStatus,
+  APIRoute,
+  GenreFromTheServer,
+} from '../../utils/const';
 
 interface InitialState {
   quests: Quest[];
@@ -163,7 +168,7 @@ export const selectCurrentQuests = createSelector(
   selectQuests,
   selectFilterType,
   (quests, filterType) => {
-    if (filterType === GenreType.All) {
+    if (filterType === GenreFromTheServer.All) {
       return quests;
     }
     return quests.filter(({ type }) => type === filterType);

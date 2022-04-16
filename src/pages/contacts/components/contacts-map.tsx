@@ -1,7 +1,7 @@
 import { MapContainer, Marker, TileLayer } from 'react-leaflet';
 import { Icon } from 'leaflet';
 
-import { LAT, LNG } from 'src/utils/const';
+import { Location } from 'src/utils/const';
 import DefaultPin from '../../../assets/img/icon-blip.svg';
 import 'leaflet/dist/leaflet.css';
 import * as S from './contacts-map.styled';
@@ -19,8 +19,8 @@ const defaultIcon = new Icon({
 });
 
 const position = {
-  lat: LAT,
-  lng: LNG,
+  lat: Location.Lat,
+  lng: Location.Lng,
 };
 
 const ContactsMap = () => {
