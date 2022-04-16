@@ -1,30 +1,35 @@
-import { GenreFromTheServer, LevelName } from './const';
+import {
+  GenreFromTheServer,
+  GenreForClient,
+  LevelNameFromTheServer,
+  LevelNameForClient,
+} from './const';
 
 export const levels = (level: string) => {
   switch (level) {
-    case LevelName.Easy:
-      return 'Лёгкий';
-    case LevelName.Medium:
-      return 'Средний';
-    case LevelName.Hard:
-      return 'Сложный';
+    case LevelNameFromTheServer.Easy:
+      return LevelNameForClient.Easy;
+    case LevelNameFromTheServer.Medium:
+      return LevelNameForClient.Medium;
+    case LevelNameFromTheServer.Hard:
+      return LevelNameForClient.Hard;
     default:
-      return 'Неизвестная сложность';
+      return 'Cложность неизвестна';
   }
 };
 
 export const genreType = (type: string) => {
   switch (type) {
     case GenreFromTheServer.Adventures:
-      return 'приключения';
+      return GenreForClient.Adventures;
     case GenreFromTheServer.Horror:
-      return 'ужасы';
+      return GenreForClient.Horror;
     case GenreFromTheServer.Mystic:
-      return 'мистика';
+      return GenreForClient.Mystic;
     case GenreFromTheServer.Detective:
-      return 'детектив';
+      return GenreForClient.Detective;
     case GenreFromTheServer.SciFi:
-      return 'sci-fi';
+      return GenreForClient.SciFi;
     default:
       return 'Жанр неизвестен';
   }

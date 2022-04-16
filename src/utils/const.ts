@@ -102,10 +102,16 @@ export const genres = [
   },
 ];
 
-export const enum LevelName {
+export const enum LevelNameFromTheServer {
   Easy = 'easy',
   Medium = 'medium',
   Hard = 'hard',
+}
+
+export const enum LevelNameForClient {
+  Easy = 'Лёгкий',
+  Medium = 'Средний',
+  Hard = 'Сложный',
 }
 
 export const enum AppRoute {

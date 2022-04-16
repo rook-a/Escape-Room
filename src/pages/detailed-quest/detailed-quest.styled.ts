@@ -52,6 +52,10 @@ const PageSubtitle = styled.p`
   font-size: ${({ theme }) => theme.font.semibase};
   line-height: 144%;
   color: ${({ theme }) => theme.color.tangerine};
+
+  &::first-letter {
+    text-transform: lowercase;
+  }
 `;
 
 const PageDescription = styled.div`
