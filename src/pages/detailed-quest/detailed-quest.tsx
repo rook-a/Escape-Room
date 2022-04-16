@@ -2,7 +2,6 @@ import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
 import NotFound from '../not-found/not-found';
-import Spinner from 'src/components/common/spinner/spinner';
 import { useAppDispatch, useAppSelector } from 'src/hooks';
 import { BookingModal } from './components/components';
 import { MainLayout } from '../../components/common/common';
@@ -22,7 +21,6 @@ import { FetchStatus } from 'src/utils/const';
 import { ReactComponent as IconClock } from '../../assets/img/icon-clock.svg';
 import { ReactComponent as IconPerson } from '../../assets/img/icon-person.svg';
 import { ReactComponent as IconPuzzle } from '../../assets/img/icon-puzzle.svg';
-import { Loader } from 'src/components/common/spinner/spinner.styled';
 import * as S from './detailed-quest.styled';
 
 const DetailedQuest = () => {
@@ -41,14 +39,6 @@ const DetailedQuest = () => {
   const handleClick = () => {
     dispatch(changePopupСondition(!popupСondition));
   };
-
-  if (questStatus === FetchStatus.Pending) {
-    return (
-      <Spinner>
-        <Loader />
-      </Spinner>
-    );
-  }
 
   if (questStatus === FetchStatus.Failed) {
     return <NotFound />;
