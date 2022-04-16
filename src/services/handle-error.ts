@@ -15,10 +15,12 @@ export const handleError = (error: AxiosError): void => {
         toast.info(response.data.error);
         break;
       case HttpCode.NotFound:
-        toast.error(`This page not found. Try again`);
+        toast.error('Ресурс не найден. Попробуйте ещё раз!');
         break;
       default:
-        toast.error('Sorry. Server error or unknown error. Try again later');
+        toast.error(
+          'Ошибка сервера или неизвестная ошибка. Попробуйте ещё раз!',
+        );
     }
   }
 };

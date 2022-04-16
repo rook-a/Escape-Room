@@ -1,4 +1,3 @@
-import React from 'react';
 import LinkItems from './components/link-item/link-items';
 import * as S from './nav.styled';
 

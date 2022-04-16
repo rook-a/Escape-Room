@@ -108,31 +108,31 @@ export const enum LevelName {
   Hard = 'hard',
 }
 
-export enum AppRoute {
+export const enum AppRoute {
   Main = '/',
   Quest = '/detailed-quest',
   Contacts = '/contacts',
   NotFound = '*',
 }
 
-export enum HttpCode {
+export const enum HttpCode {
   BadRequest = 400,
   NotFound = 404,
 }
 
-export enum APIRoute {
+export const enum APIRoute {
   Quests = '/quests',
   Orders = '/orders',
 }
 
-export enum FetchStatus {
+export const enum FetchStatus {
   Idle = 'Idle',
   Pending = 'Pending',
   Success = 'Success',
   Failed = 'Failed',
 }
 
-export enum NameSpace {
+export const enum NameSpace {
   App = 'App',
   Quests = 'Quests',
 }

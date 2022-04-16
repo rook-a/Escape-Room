@@ -1,5 +1,3 @@
-import React from 'react';
-
 import QuestsList from './components/quests-list/quests-list';
 import Tabs from './components/tabs/tabs';
 import Spinner from 'src/components/common/spinner/spinner';

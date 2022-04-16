@@ -90,7 +90,7 @@ const BookingModal = () => {
 
   if (sendOrderStatus === FetchStatus.Success) {
     toast.success(
-      `Спасибо за обращение! Игра забронированна на ${formState.name.value}!`,
+      `Спасибо за обращение! Квест забронирован на имя ${formState.name.value}!`,
     );
   }
 

@@ -1,5 +1,3 @@
-import React from 'react';
-
 import DetailedQuest from '../../pages/detailed-quest/detailed-quest';
 import Contacts from '../../pages/contacts/contacts';
 import Home from '../../pages/home/home';

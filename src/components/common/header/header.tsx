@@ -1,4 +1,3 @@
-import React from 'react';
 import Logo from './components/logo/logo';
 import Nav from './components/nav/nav';
 import * as S from './header.styled';

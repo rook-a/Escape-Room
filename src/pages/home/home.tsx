@@ -1,12 +1,11 @@
-import * as S from './home.styled';
+import { QuestsCatalog } from './components/components';
 import {
   MainLayout,
   PageTitle,
   PageHeading,
   PageSubtext,
 } from '../../components/common/common';
-import React from 'react';
-import { QuestsCatalog } from './components/components';
+import * as S from './home.styled';
 
 const HomePage = () => (
   <MainLayout>

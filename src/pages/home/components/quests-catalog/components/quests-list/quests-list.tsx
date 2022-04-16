@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { useAppSelector } from 'src/hooks';
 import { selectCurrentQuests } from '../../../../../../store/quests-slice/quests-slice';
 import QuestsItem from '../quests-item/quests-item';

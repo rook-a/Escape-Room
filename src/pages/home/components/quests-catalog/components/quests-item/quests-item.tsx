@@ -1,4 +1,3 @@
-import React from 'react';
 import { generatePath } from 'react-router-dom';
 
 import { Quest } from 'src/types/quest';

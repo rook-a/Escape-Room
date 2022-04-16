@@ -1,4 +1,3 @@
-import React from 'react';
 import { useAppDispatch, useAppSelector } from 'src/hooks';
 import { currentPage, selectCurrentPage } from 'src/store/app-slice/api-slice';
 import { menuLinks } from 'src/utils/const';
