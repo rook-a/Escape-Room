@@ -16,6 +16,7 @@
     "styled-components": "5.3.3"
   },
   "devDependencies": {
+    "@jedmao/redux-mock-store": "^3.0.5",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.0.1",
     "@testing-library/user-event": "^14.1.0",
