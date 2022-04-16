@@ -1,4 +1,4 @@
-import React, { ChangeEvent, FormEvent, useEffect, useState } from 'react';
+import { ChangeEvent, FormEvent, useEffect, useState } from 'react';
 import { toast } from 'react-toastify';
 
 import { useAppDispatch, useAppSelector } from 'src/hooks';
@@ -82,12 +82,17 @@ const BookingModal = () => {
   }, [dispatch, popupСondition, sendOrderStatus]);
 
   if (sendOrderStatus === FetchStatus.Failed) {
-    toast.info('Some unexpected error. Try again!');
+    toast.error('Неизвестная ошибка. Попробуйте ещё раз!');
   }
 
   const isPending = sendOrderStatus === FetchStatus.Pending;
-  const isValid =
-    Object.values(formState).some(({ error }) => error) && isChecked;
+  const isValid = Object.values(formState).some(({ error }) => error);
+
+  if (sendOrderStatus === FetchStatus.Success) {
+    toast.success(
+      `Спасибо за обращение! Игра забронированна на ${formState.name.value}!`,
+    );
+  }
 
   const handleChange = (evt: ChangeEvent<HTMLInputElement>) => {
     const { value, name } = evt.target;
@@ -117,8 +122,6 @@ const BookingModal = () => {
       phone: formState.tel.value,
       isLegal: isChecked,
     };
-
-    console.log(data);
 
     dispatch(sendOrder(data));
   };
@@ -163,7 +166,10 @@ const BookingModal = () => {
             ),
           )}
 
-          <S.BookingSubmit type="submit" disabled={isValid || isPending}>
+          <S.BookingSubmit
+            type="submit"
+            disabled={isValid || isPending || !isChecked}
+          >
             Отправить заявку
           </S.BookingSubmit>
           <S.BookingCheckboxWrapper>
