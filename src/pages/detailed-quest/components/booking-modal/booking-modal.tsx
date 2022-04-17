@@ -10,7 +10,7 @@ import {
 import {
   changePopupСondition,
   selectChangePopupСondition,
-} from 'src/store/app-slice/api-slice';
+} from 'src/store/app-slice/app-slice';
 
 import { FetchStatus } from 'src/utils/const';
 

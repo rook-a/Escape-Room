@@ -1,5 +1,5 @@
 import { useAppDispatch, useAppSelector } from 'src/hooks';
-import { currentPage, selectCurrentPage } from 'src/store/app-slice/api-slice';
+import { currentPage, selectCurrentPage } from 'src/store/app-slice/app-slice';
 import { menuLinks } from 'src/utils/const';
 import * as S from './link-items.styled';
 

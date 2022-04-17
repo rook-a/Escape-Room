@@ -1,6 +1,6 @@
 import { combineReducers } from '@reduxjs/toolkit';
 
-import { appSlice } from './app-slice/api-slice';
+import { appSlice } from './app-slice/app-slice';
 import { questsSlice } from './quests-slice/quests-slice';
 
 import { NameSpace } from '../utils/const';

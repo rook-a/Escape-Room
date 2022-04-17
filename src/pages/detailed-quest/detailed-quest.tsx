@@ -13,7 +13,7 @@ import {
 import {
   selectChangePopupСondition,
   changePopupСondition,
-} from 'src/store/app-slice/api-slice';
+} from 'src/store/app-slice/app-slice';
 
 import { genreType, levels } from 'src/utils/utils';
 import { FetchStatus } from 'src/utils/const';

@@ -5,7 +5,7 @@ import {
 } from '@reduxjs/toolkit';
 import { AxiosInstance } from 'axios';
 
-import { selectFilterType } from '../app-slice/api-slice';
+import { selectFilterType } from '../app-slice/app-slice';
 import { handleError } from 'src/services/handle-error';
 
 import { Quest } from 'src/types/quest';

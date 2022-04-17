@@ -1,7 +1,7 @@
 import {
   selectFilterType,
   currentFilterType,
-} from '../../../../../../store/app-slice/api-slice';
+} from '../../../../../../store/app-slice/app-slice';
 
 import { useAppDispatch, useAppSelector } from 'src/hooks';
 
