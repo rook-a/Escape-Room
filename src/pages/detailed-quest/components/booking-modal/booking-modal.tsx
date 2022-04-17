@@ -17,7 +17,7 @@ import { FetchStatus } from 'src/utils/const';
 import { ReactComponent as IconClose } from '../../../../assets/img/icon-close.svg';
 import * as S from './booking-modal.styled';
 
-const REG_EXP_NAME = /^[а-яА-Я'][а-яА-Я-' ]+[а-яА-Я']?$/i;
+const REG_EXP_NAME = /^[аА-яЯaA-zZ'][аА-яЯaA-zZ -' ]+[аА-яЯaA-zZ']?$/i;
 const REG_EXP_PHONE = /[\d+]{10}/;
 const REG_EXP_PEOPLE_COUNT = /[\d+]/;
 
@@ -81,12 +81,12 @@ const BookingModal = () => {
     }
   }, [dispatch, popupСondition, sendOrderStatus]);
 
+  const isPending = sendOrderStatus === FetchStatus.Pending;
+  const isValid = Object.values(formState).some(({ error }) => error);
+
   if (sendOrderStatus === FetchStatus.Failed) {
     toast.error('Неизвестная ошибка. Попробуйте ещё раз!');
   }
-
-  const isPending = sendOrderStatus === FetchStatus.Pending;
-  const isValid = Object.values(formState).some(({ error }) => error);
 
   if (sendOrderStatus === FetchStatus.Success) {
     toast.success(
