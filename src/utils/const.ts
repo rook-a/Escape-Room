@@ -52,6 +52,7 @@ export const enum GenreForClient {
   Mystic = 'Мистика',
   Detective = 'Детектив',
   SciFi = 'Sci-fi',
+  Unknown = 'Жанр неизвестен',
 }
 
 const Icon = {
@@ -112,6 +113,7 @@ export const enum LevelNameForClient {
   Easy = 'Лёгкий',
   Medium = 'Средний',
   Hard = 'Сложный',
+  Unknown = 'Cложность неизвестна',
 }
 
 export const enum AppRoute {

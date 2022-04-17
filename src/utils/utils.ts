@@ -14,7 +14,7 @@ export const levels = (level: string) => {
     case LevelNameFromTheServer.Hard:
       return LevelNameForClient.Hard;
     default:
-      return 'Cложность неизвестна';
+      return LevelNameForClient.Unknown;
   }
 };
 
@@ -31,6 +31,6 @@ export const genreType = (type: string) => {
     case GenreFromTheServer.SciFi:
       return GenreForClient.SciFi;
     default:
-      return 'Жанр неизвестен';
+      return GenreForClient.Unknown;
   }
 };
