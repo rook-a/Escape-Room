@@ -1,9 +1,9 @@
 import { generatePath } from 'react-router-dom';
 
 import { Quest } from 'src/types/quest';
-import { levels } from 'src/utils/utils';
-import { ReactComponent as IconPerson } from '../../../../../../assets/img/icon-person.svg';
-import { ReactComponent as IconPuzzle } from '../../../../../../assets/img/icon-puzzle.svg';
+import { adaptLevelNameForClient } from 'src/utils/utils';
+import { ReactComponent as IconPerson } from '../../assets/img/icon-person.svg';
+import { ReactComponent as IconPuzzle } from '../../assets/img/icon-puzzle.svg';
 import * as S from './quests-item.styled';
 
 interface IQuestsItem {
@@ -36,7 +36,7 @@ const QuestsItem = ({ quest }: IQuestsItem) => {
               </S.QuestFeatureItem>
               <S.QuestFeatureItem>
                 <IconPuzzle />
-                {levels(level)}
+                {adaptLevelNameForClient(level)}
               </S.QuestFeatureItem>
             </S.QuestFeatures>
           </S.QuestContent>

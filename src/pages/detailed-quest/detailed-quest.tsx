@@ -2,8 +2,8 @@ import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
 import NotFound from '../not-found/not-found';
-import { useAppDispatch, useAppSelector } from 'src/hooks';
-import { BookingModal } from './components/components';
+import { useAppDispatch, useAppSelector } from 'src/hooks/hooks';
+import QuestModal from '../../components/quest-modal/quest-modal';
 import { MainLayout } from '../../components/common/common';
 import {
   fetchQuestAction,
@@ -15,7 +15,10 @@ import {
   changePopupСondition,
 } from 'src/store/app-slice/app-slice';
 
-import { genreType, levels } from 'src/utils/utils';
+import {
+  adaptGenreTypeForClient,
+  adaptLevelNameForClient,
+} from 'src/utils/utils';
 import { FetchStatus } from 'src/utils/const';
 
 import { ReactComponent as IconClock } from '../../assets/img/icon-clock.svg';
@@ -63,7 +66,7 @@ const DetailedQuest = () => {
         <S.PageContentWrapper>
           <S.PageHeading>
             <S.PageTitle>{title}</S.PageTitle>
-            <S.PageSubtitle>{genreType(type)}</S.PageSubtitle>
+            <S.PageSubtitle>{adaptGenreTypeForClient(type)}</S.PageSubtitle>
           </S.PageHeading>
 
           <S.PageDescription>
@@ -78,7 +81,9 @@ const DetailedQuest = () => {
               </S.FeaturesItem>
               <S.FeaturesItem>
                 <IconPuzzle width="24" height="24" />
-                <S.FeatureTitle>{levels(level)}</S.FeatureTitle>
+                <S.FeatureTitle>
+                  {adaptLevelNameForClient(level)}
+                </S.FeatureTitle>
               </S.FeaturesItem>
             </S.Features>
 
@@ -90,7 +95,7 @@ const DetailedQuest = () => {
           </S.PageDescription>
         </S.PageContentWrapper>
 
-        {popupСondition && <BookingModal />}
+        {popupСondition && <QuestModal />}
       </S.Main>
     </MainLayout>
   );

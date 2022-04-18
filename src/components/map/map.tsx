@@ -2,9 +2,9 @@ import { MapContainer, Marker, TileLayer } from 'react-leaflet';
 import { Icon } from 'leaflet';
 
 import { Location } from 'src/utils/const';
-import DefaultPin from '../../../assets/img/icon-blip.svg';
+import DefaultPin from '../../assets/img/icon-blip.svg';
 import 'leaflet/dist/leaflet.css';
-import * as S from './contacts-map.styled';
+import * as S from './map.styled';
 
 const LAYER_URL =
   'https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png';
@@ -23,7 +23,7 @@ const position = {
   lng: Location.Lng,
 };
 
-const ContactsMap = () => {
+const Map = () => {
   return (
     <S.ContactsMap>
       <MapContainer
@@ -38,4 +38,4 @@ const ContactsMap = () => {
   );
 };
 
-export default ContactsMap;
+export default Map;

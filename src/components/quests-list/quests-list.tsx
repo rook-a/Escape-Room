@@ -1,5 +1,5 @@
-import { useAppSelector } from 'src/hooks';
-import { selectCurrentQuests } from '../../../../../../store/quests-slice/quests-slice';
+import { useAppSelector } from 'src/hooks/hooks';
+import { selectCurrentQuests } from '../../store/quests-slice/quests-slice';
 import QuestsItem from '../quests-item/quests-item';
 
 import * as S from './quests-list.styled';

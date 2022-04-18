@@ -1,8 +1,8 @@
-import QuestsList from './components/quests-list/quests-list';
-import Tabs from './components/tabs/tabs';
+import QuestsList from '../quests-list/quests-list';
+import Tabs from '../tabs/tabs';
 import Spinner from 'src/components/common/spinner/spinner';
 
-import { useAppSelector } from 'src/hooks';
+import { useAppSelector } from 'src/hooks/hooks';
 import { selectQuestsStatus } from 'src/store/quests-slice/quests-slice';
 
 import { FetchStatus } from 'src/utils/const';

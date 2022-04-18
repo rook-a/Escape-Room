@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { Link as RouterLink } from '../../../../../common';
+import { Link as RouterLink } from '../common';
 
 const LinkItem = styled.li`
   &:not(:last-child) {

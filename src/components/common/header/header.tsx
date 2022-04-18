@@ -1,5 +1,5 @@
-import Logo from './components/logo/logo';
-import Nav from './components/nav/nav';
+import Logo from '../logo/logo';
+import Nav from '../nav/nav';
 import * as S from './header.styled';
 
 const Header = () => (

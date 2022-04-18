@@ -1,13 +1,14 @@
 import { lazy, Suspense } from 'react';
 
+import Spinner from '../common/spinner/spinner';
 import { Routes, Route } from '../common/common';
 import { appTheme } from './common';
+import { ThemeProvider } from 'styled-components';
+
 import { AppRoute } from '../../utils/const';
 
-import { ThemeProvider } from 'styled-components';
-import * as S from './app.styled';
-import Spinner from '../common/spinner/spinner';
 import { Loader } from '../common/spinner/spinner.styled';
+import * as S from './app.styled';
 
 const Home = lazy(() => import('../../pages/home/home'));
 const DetailedQuest = lazy(

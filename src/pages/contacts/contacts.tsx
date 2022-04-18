@@ -1,9 +1,9 @@
+import Map from '../../components/map/map';
 import {
   MainLayout,
   PageTitle,
   PageSubtext,
 } from '../../components/common/common';
-import ContactsMap from './components/contacts-map';
 import * as S from './contacts.styled';
 
 const Contacts = () => (
@@ -44,7 +44,7 @@ const Contacts = () => (
             </S.ContactValue>
           </S.ContactsList>
 
-          <ContactsMap />
+          <Map />
         </S.Contacts>
       </S.ContentWrapper>
     </S.Main>

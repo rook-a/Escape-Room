@@ -1,9 +1,9 @@
-import { useAppDispatch, useAppSelector } from 'src/hooks';
+import { useAppDispatch, useAppSelector } from 'src/hooks/hooks';
 import { currentPage, selectCurrentPage } from 'src/store/app-slice/app-slice';
 import { menuLinks } from 'src/utils/const';
-import * as S from './link-items.styled';
+import * as S from './nav-link-items.styled';
 
-const LinkItems = () => {
+const NavLinkItems = () => {
   const dispatch = useAppDispatch();
   const activePage = useAppSelector(selectCurrentPage);
 
@@ -28,4 +28,4 @@ const LinkItems = () => {
   );
 };
 
-export default LinkItems;
+export default NavLinkItems;

@@ -1,14 +1,16 @@
-import { QuestsCatalog } from './components/components';
+import QuestsCatalog from '../../components/quests-catalog/quests-catalog';
+import HomeEmpty from '../../components/home-empty/home-empty';
 import {
   MainLayout,
   PageTitle,
   PageHeading,
   PageSubtext,
 } from '../../components/common/common';
-import * as S from './home.styled';
-import HomeEmpty from './components/home-empty/home-empty';
-import { useAppSelector } from 'src/hooks';
+
+import { useAppSelector } from 'src/hooks/hooks';
 import { selectCurrentQuests } from 'src/store/quests-slice/quests-slice';
+
+import * as S from './home.styled';
 
 const HomePage = () => {
   const quests = useAppSelector(selectCurrentQuests);

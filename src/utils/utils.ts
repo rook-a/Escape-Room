@@ -5,7 +5,7 @@ import {
   LevelNameForClient,
 } from './const';
 
-export const levels = (level: string) => {
+export const adaptLevelNameForClient = (level: string) => {
   switch (level) {
     case LevelNameFromTheServer.Easy:
       return LevelNameForClient.Easy;
@@ -18,7 +18,7 @@ export const levels = (level: string) => {
   }
 };
 
-export const genreType = (type: string) => {
+export const adaptGenreTypeForClient = (type: string) => {
   switch (type) {
     case GenreFromTheServer.Adventures:
       return GenreForClient.Adventures;

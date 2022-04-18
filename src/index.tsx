@@ -5,7 +5,7 @@ import { ToastContainer } from 'react-toastify';
 
 import App from './components/app/app';
 import HistoryRouter from './components/history-route/history-route';
-import { store } from './store';
+import { store } from './store/store';
 import { fetchQuestsAction } from './store/quests-slice/quests-slice';
 import { browserHistory } from './browser-histoty';
 

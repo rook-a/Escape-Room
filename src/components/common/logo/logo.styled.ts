@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Link as RouterLink } from '../../../common';
+import { Link as RouterLink } from '../common';
 
 const Logo = styled.a`
   margin-right: 250px;

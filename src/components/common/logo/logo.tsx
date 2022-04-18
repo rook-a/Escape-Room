@@ -1,5 +1,5 @@
-import logo from '../../../../../assets/img/logo.svg';
-import * as S from '../../components/logo/logo.styled';
+import logo from '../../../assets/img/logo.svg';
+import * as S from './logo.styled';
 
 const Logo = () => (
   <S.LogoLink to="/">

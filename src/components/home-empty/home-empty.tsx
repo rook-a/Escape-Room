@@ -1,4 +1,4 @@
-import { ReactComponent as PokerFaceEmoji } from '../../../../assets/img/poker-face-emoji.svg';
+import { ReactComponent as PokerFaceEmoji } from '../../assets/img/poker-face-emoji.svg';
 import * as S from './home-empty.styled';
 
 const HomeEmpty = () => (

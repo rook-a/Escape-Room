@@ -1,9 +1,9 @@
 import {
   selectFilterType,
   currentFilterType,
-} from '../../../../../../store/app-slice/app-slice';
+} from '../../store/app-slice/app-slice';
 
-import { useAppDispatch, useAppSelector } from 'src/hooks';
+import { useAppDispatch, useAppSelector } from 'src/hooks/hooks';
 
 import { genres } from 'src/utils/const';
 

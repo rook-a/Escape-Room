@@ -1,12 +1,12 @@
 import { ChangeEvent, FormEvent, useEffect, useState } from 'react';
 import { toast } from 'react-toastify';
 
-import { useAppDispatch, useAppSelector } from 'src/hooks';
+import { useAppDispatch, useAppSelector } from 'src/hooks/hooks';
 import {
   changeOrderStatus,
   selectSendOrderStatus,
   sendOrder,
-} from '../../../../store/quests-slice/quests-slice';
+} from '../../store/quests-slice/quests-slice';
 import {
   changePopupСondition,
   selectChangePopupСondition,
@@ -14,8 +14,8 @@ import {
 
 import { FetchStatus } from 'src/utils/const';
 
-import { ReactComponent as IconClose } from '../../../../assets/img/icon-close.svg';
-import * as S from './booking-modal.styled';
+import { ReactComponent as IconClose } from '../../assets/img/icon-close.svg';
+import * as S from './quest-modal.styled';
 
 const REG_EXP_NAME = /^[аА-яЯaA-zZ'][аА-яЯaA-zZ -' ]+[аА-яЯaA-zZ']?$/i;
 const REG_EXP_PHONE = /[\d+]{10}/;
@@ -48,7 +48,7 @@ const fields = {
   },
 };
 
-const BookingModal = () => {
+const QuestModal = () => {
   const dispatch = useAppDispatch();
   const sendOrderStatus = useAppSelector(selectSendOrderStatus);
   const popupСondition = useAppSelector(selectChangePopupСondition);
@@ -206,4 +206,4 @@ const BookingModal = () => {
   );
 };
 
-export default BookingModal;
+export default QuestModal;

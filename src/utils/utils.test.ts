@@ -1,4 +1,4 @@
-import { levels, genreType } from './utils';
+import { adaptLevelNameForClient, adaptGenreTypeForClient } from './utils';
 import {
   GenreFromTheServer,
   GenreForClient,
@@ -8,20 +8,22 @@ import {
 
 describe('Utils', () => {
   it('function levels return correct answer', () => {
-    expect(levels(LevelNameFromTheServer.Easy)).toBe(LevelNameForClient.Easy);
+    expect(adaptLevelNameForClient(LevelNameFromTheServer.Easy)).toBe(
+      LevelNameForClient.Easy,
+    );
   });
 
   it('function levels return incorrect answer', () => {
-    expect(levels('')).toBe(LevelNameForClient.Unknown);
+    expect(adaptLevelNameForClient('')).toBe(LevelNameForClient.Unknown);
   });
 
   it('function genreType return correct answer', () => {
-    expect(genreType(GenreFromTheServer.Detective)).toBe(
+    expect(adaptGenreTypeForClient(GenreFromTheServer.Detective)).toBe(
       GenreForClient.Detective,
     );
   });
 
   it('function genreType return incorrect answer', () => {
-    expect(genreType('')).toBe(GenreForClient.Unknown);
+    expect(adaptGenreTypeForClient('')).toBe(GenreForClient.Unknown);
   });
 });
