@@ -12,7 +12,7 @@ import { selectCurrentQuests } from 'src/store/quests-slice/quests-slice';
 
 import * as S from './home.styled';
 
-const HomePage = () => {
+const Home = () => {
   const quests = useAppSelector(selectCurrentQuests);
 
   const isEmpty = quests.length === 0;
@@ -36,4 +36,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default Home;

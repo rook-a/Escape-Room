@@ -24,13 +24,13 @@ export const appSlice = createSlice({
     currentFilterType: (state, action) => {
       state.filterType = action.payload;
     },
-    changePopupСondition: (state, action) => {
+    changePopupCondition: (state, action) => {
       state.questPopupOpen = action.payload;
     },
   },
 });
 
-export const { currentPage, currentFilterType, changePopupСondition } =
+export const { currentPage, currentFilterType, changePopupCondition } =
   appSlice.actions;
 
 const selectAppState = (state: State) => state[NameSpace.App];

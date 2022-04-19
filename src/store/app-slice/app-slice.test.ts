@@ -2,7 +2,7 @@ import {
   appSlice,
   currentPage,
   currentFilterType,
-  changePopupСondition,
+  changePopupCondition,
 } from './app-slice';
 import { GenreFromTheServer, MenuLinkName } from '../../utils/const';
 
@@ -36,7 +36,7 @@ describe('App slice', () => {
   });
 
   it('condition quest popup shoude be update correctly', () => {
-    expect(appSlice.reducer(state, changePopupСondition(true))).toEqual({
+    expect(appSlice.reducer(state, changePopupCondition(true))).toEqual({
       ...state,
       questPopupOpen: true,
     });

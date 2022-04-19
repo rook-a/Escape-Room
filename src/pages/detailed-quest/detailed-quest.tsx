@@ -12,7 +12,7 @@ import {
 } from '../../store/quests-slice/quests-slice';
 import {
   selectChangePopupСondition,
-  changePopupСondition,
+  changePopupCondition,
 } from 'src/store/app-slice/app-slice';
 
 import {
@@ -40,7 +40,7 @@ const DetailedQuest = () => {
   }, [dispatch, selectedQuestId]);
 
   const handleClick = () => {
-    dispatch(changePopupСondition(!popupСondition));
+    dispatch(changePopupCondition(!popupСondition));
   };
 
   if (questStatus === FetchStatus.Failed) {

@@ -8,7 +8,7 @@ import {
   sendOrder,
 } from '../../store/quests-slice/quests-slice';
 import {
-  changePopupСondition,
+  changePopupCondition,
   selectChangePopupСondition,
 } from 'src/store/app-slice/app-slice';
 
@@ -76,7 +76,7 @@ const QuestModal = () => {
 
   useEffect(() => {
     if (sendOrderStatus === FetchStatus.Success) {
-      dispatch(changePopupСondition(!popupСondition));
+      dispatch(changePopupCondition(!popupСondition));
       dispatch(changeOrderStatus(FetchStatus.Idle));
     }
   }, [dispatch, popupСondition, sendOrderStatus]);
@@ -130,7 +130,7 @@ const QuestModal = () => {
     <S.BlockLayer>
       <S.Modal>
         <S.ModalCloseBtn
-          onClick={() => dispatch(changePopupСondition(!popupСondition))}
+          onClick={() => dispatch(changePopupCondition(!popupСondition))}
         >
           <IconClose width="16" height="16" />
           <S.ModalCloseLabel>Закрыть окно</S.ModalCloseLabel>
